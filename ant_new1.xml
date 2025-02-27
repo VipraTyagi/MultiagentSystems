@@ -1,0 +1,81 @@
+<mujoco model="unnamed_model">
+    <compiler angle="radian" autolimits="true" coordinate="local" />
+    <option timestep="0.002" viscosity="0.0" integrator="implicit">
+        <flag gravity="enable" contact="enable" />
+    </option>
+    
+    <!-- Actuators -->
+    <actuator>
+        <position ctrllimited="true" ctrlrange="-1.5707964 1.5707964" name="unnamed_position_(0)" joint="neck_joint" />
+        <position ctrllimited="true" ctrlrange="-1.5707964 1.5707964" name="unnamed_position_(1)" joint="abdominal_joint" />
+        <position ctrllimited="true" name="unnamed_position_(2)" joint="unnamed_joint_(0)" />
+        <position ctrllimited="true" name="unnamed_position_(3)" joint="unnamed_joint_(1)" />
+        <position ctrllimited="true" name="unnamed_position_(4)" joint="unnamed_joint_(2)" />
+        <position ctrllimited="true" name="unnamed_position_(5)" joint="unnamed_joint_(3)" />
+        <position ctrllimited="true" name="unnamed_position_(6)" joint="unnamed_joint_(4)" />
+        <position ctrllimited="true" name="unnamed_position_(7)" joint="unnamed_joint_(5)" />
+    </actuator>
+
+    <!-- Worldbody -->
+    <worldbody>
+        <body name="head">
+            <joint axis="0.0 1.0 0.0" range="-1.5707964 1.5707964" name="neck_joint" />
+            <geom size="0.1" type="sphere" name="unnamed_sphere" rgba="0.0 0.0 1.0 1.0" />
+        </body>
+
+        <body name="thorax">
+            <joint axis="0.0 1.0 0.0" range="-1.5707964 1.5707964" pos="0.0 0.0 -0.25" name="abdominal_joint" />
+            <geom size="0.1 0.25" type="capsule" name="unnamed_capsule_(0)" rgba="0.0 0.0 1.0 1.0" />
+            
+            <!-- Legs -->
+            <body name="left_front_leg_(1)">
+                <geom size="0.05 0.25" type="capsule" name="unnamed_capsule_(1)" rgba="0.0 0.0 1.0 1.0" />
+            </body>
+            <body name="right_front_leg_(1)">
+                <geom size="0.05 0.25" type="capsule" name="unnamed_capsule_(2)" rgba="0.0 0.0 1.0 1.0" />
+            </body>
+            <body name="left_middle_leg_(1)">
+                <geom size="0.05 0.25" type="capsule" name="unnamed_capsule_(3)" rgba="0.0 0.0 1.0 1.0" />
+            </body>
+            <body name="right_middle_leg_(1)">
+                <geom size="0.05 0.25" type="capsule" name="unnamed_capsule_(4)" rgba="0.0 0.0 1.0 1.0" />
+            </body>
+            <body name="left_rear_leg_(1)">
+                <geom size="0.05 0.25" type="capsule" name="unnamed_capsule_(5)" rgba="0.0 0.0 1.0 1.0" />
+            </body>
+            <body name="right_rear_leg_(1)">
+                <geom size="0.05 0.25" type="capsule" name="unnamed_capsule_(6)" rgba="0.0 0.0 1.0 1.0" />
+            </body>
+        </body>
+
+        <body name="abdomen">
+            <geom size="0.1 0.25" type="capsule" name="unnamed_capsule_(7)" rgba="0.0 0.0 1.0 1.0" />
+        </body>
+
+        <!-- Leg Joints -->
+        <body name="left_front_leg_(0)">
+            <joint axis="0.0 1.0 0.0" range="-1.5707964 1.5707964" name="unnamed_joint_(0)" />
+            <geom size="0.05 0.25" type="capsule" name="unnamed_capsule_(8)" rgba="0.0 0.0 1.0 1.0" />
+        </body>
+        <body name="right_front_leg_(0)">
+            <joint axis="0.0 1.0 0.0" range="-1.5707964 1.5707964" name="unnamed_joint_(1)" />
+            <geom size="0.05 0.25" type="capsule" name="unnamed_capsule_(9)" rgba="0.0 0.0 1.0 1.0" />
+        </body>
+        <body name="left_middle_leg_(0)">
+            <joint axis="0.0 1.0 0.0" range="-1.5707964 1.5707964" name="unnamed_joint_(2)" />
+            <geom size="0.05 0.25" type="capsule" name="unnamed_capsule_(10)" rgba="0.0 0.0 1.0 1.0" />
+        </body>
+        <body name="right_middle_leg_(0)">
+            <joint axis="0.0 1.0 0.0" range="-1.5707964 1.5707964" name="unnamed_joint_(3)" />
+            <geom size="0.05 0.25" type="capsule" name="unnamed_capsule_(11)" rgba="0.0 0.0 1.0 1.0" />
+        </body>
+        <body name="left_rear_leg_(0)">
+            <joint axis="0.0 1.0 0.0" range="-1.5707964 1.5707964" name="unnamed_joint_(4)" />
+            <geom size="0.05 0.25" type="capsule" name="unnamed_capsule_(12)" rgba="0.0 0.0 1.0 1.0" />
+        </body>
+        <body name="right_rear_leg_(0)">
+            <joint axis="0.0 1.0 0.0" range="-1.5707964 1.5707964" name="unnamed_joint_(5)" />
+            <geom size="0.05 0.25" type="capsule" name="unnamed_capsule_(13)" rgba="0.0 0.0 1.0 1.0" />
+        </body>
+    </worldbody>
+</mujoco>
